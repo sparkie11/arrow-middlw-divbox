@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+
+  box-sizing: border-box;
+}
+
+.yahoo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 500px;
+  white-space: nowrap;
+  background-color: red;
+}
+
+.google {
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  left: 20px;
+  bottom: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+.google::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(100px);
+  border: 15px solid;
+  border-color: #000 #0000 #0000 #0000;
+}
+
+.yahoo:hover .google {
+  top: -130%;
+}
